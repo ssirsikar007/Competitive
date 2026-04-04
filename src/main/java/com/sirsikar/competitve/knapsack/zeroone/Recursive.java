@@ -14,7 +14,7 @@ public class Recursive {
             return 0;
         }
         if(wt[n-1] <= W) {
-            return Math.max(Knapsack(wt,val,W,n-1),wt[n-1] + Knapsack(wt,val,W-wt[n-1],n-1));
+            return Math.max(Knapsack(wt,val,W,n-1),val[n-1] + Knapsack(wt,val,W-wt[n-1],n-1));
         } else {
             return Knapsack(wt,val,W,n-1);
         }
